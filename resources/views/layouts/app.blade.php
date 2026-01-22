@@ -58,6 +58,7 @@
                 <a href="{{ url('/dashboard') }}" class="btn btn-light nav-btn">Dashboard</a>
                 <a href="{{ url('/profile') }}" class="btn btn-light nav-btn">Profile</a>
                 <a href="{{ url('/settings')}}" class="btn btn-light nav-btn">Settings</a>
+                <a href="{{ url('/management')}}" class="btn btn-light nav-btn">Management</a>
                 <a href="#" class="btn btn-outline-light nav-btn mt-3">Help</a>
             </div>
             @endauth

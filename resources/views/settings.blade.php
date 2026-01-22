@@ -15,8 +15,21 @@
      <div class="alert alert-success">{{ session('success') }}</div>  
     @endif
 
+    <form action="{{ route('profile.update.picture')}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="mb-3">
+            <label class="form-label">Profile Picture</label>
+            <input type="file" name="profilePicture" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary rounded-pill">Update Picture</button>
+    </form>
+
       <form method="POST" action="{{ url('/profile') }}">
         @csrf
+
+        <div>
+
+        </div>
         <div class="mb-3">
             <label class="form-label">Firstname</label>
             <input type="text" name="firstname" class="form-control" value="{{ auth()->user()->firstname }}" required>
